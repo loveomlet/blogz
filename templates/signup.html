@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Create an account</h1>
+    <form action="/signup" method="POST">
+        <label>Enter a valid username</label><br>
+        <input name='username' type='text' value='{{ username }}'>
+        <label>Enter a valid password</label><br>
+        <input name='password' type='password' value='{{ password }}'>
+        <label>Please re-enter your password</label><br>
+        <input name='verify' type='password' value='{{ verify }}'>
+        <input type='submit' value="Create your account">
+    </form>
+{% endblock %}

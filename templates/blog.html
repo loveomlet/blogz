@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Da Post Mon!</h1>
+
+    <!--Render Individual Blog from Index List-->
+    <h2>{{ blog.title }}</h2>
+    <p>{{ blog.body }}</p></li>
+    <p>Written by
+        <a href="/blog?user={{ blog.user.username }}">{{ blog.user.username }}</a> on {{ blog.date }}
+    </p>
+{% endblock %}
